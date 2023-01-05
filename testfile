@@ -1,0 +1,59 @@
+# mutation newTodo {
+#   createTodo(description: "Test description is here", completed:true, dueDate: "16-10-2020") {
+#     success
+#     errors
+#     todo {
+#       id
+#       completed
+#       description
+#       dueDate
+#     }
+#   }
+# }
+
+
+# query fetchAllTodos {
+#   todos {
+#     success
+#     errors
+#     todos {
+#       description
+#       completed
+#       dueDate
+#       id
+#     }
+#   }
+# }
+
+# query fetchTodo {
+#   todo(id: "63b67c98afe2029bda500f05") {
+#     success
+#     errors
+#     todo { id completed description dueDate }
+#   }
+# }
+
+# mutation markDone {
+#   markDone(todoId: "63b67cf0afe2029bda500f06") {
+#     success
+#     errors
+#     todo { id completed description dueDate }
+#   }
+# }
+
+
+# mutation {
+#   deleteTodo(todoId: "63b67cf0afe2029bda500f06") {
+#     success
+#     errors
+#   }
+# }
+
+
+# mutation updateDueDate {
+#   updateDueDate(todoId: "63b67c98afe2029bda500f05", newDate: "05-05-2020") {
+#     success
+#     errors
+#   }
+# }
+
